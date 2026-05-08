@@ -263,6 +263,8 @@ body::before {
   min-height:680px;
   padding:56px 38px 42px;
   color:#f7ead1;
+  position:relative;
+  overflow:hidden;
   background:
     linear-gradient(rgba(13,21,18,0.72),rgba(13,21,18,0.88)),
     radial-gradient(circle at center,rgba(127,215,156,0.18),transparent 32%),
@@ -280,7 +282,10 @@ body::before {
     conic-gradient(from 20deg, rgba(127,215,156,0.55), transparent 54deg, transparent 360deg);
   opacity:0.58;
   animation:radarSweep 8s linear infinite;
+  z-index:0;
+  pointer-events:none;
 }
+#title-screen > * { position:relative; z-index:1; }
 @keyframes radarSweep { to { transform:translateX(-50%) rotate(360deg); } }
 .stamp {
   color:#ffd6c8;
